@@ -1,0 +1,170 @@
+/* Custom CSS for Elegant Fashion Shop */
+
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #c19a6b;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-color);
+  background-color: #fff;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--primary-color) !important;
+}
+
+.nav-link {
+  color: var(--dark-color) !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.hero p {
+  color: var(--dark-color);
+  font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #a9825a;
+  border-color: #a9825a;
+}
+
+.btn-outline-secondary {
+  color: var(--dark-color);
+  border-color: var(--dark-color);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.filter-btn.active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+/* Product Cards */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-price {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.add-to-cart-btn {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Forms */
+.form-control, .form-select {
+  border-radius: 0;
+  border: 1px solid #ced4da;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(193, 154, 107, 0.25);
+}
+
+/* Cart Modal */
+.modal-content {
+  border-radius: 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.remove-item {
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.remove-item:hover {
+  color: #bd2130;
+}
+
+.quantity-input {
+  width: 60px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .card-img-top {
+    height: 150px;
+  }
+}

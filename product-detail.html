@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Elegant Fashion Shop</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Elegant Fashion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#shop">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tailoring">Tailoring</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="cartIcon">Cart (<span id="cartCount">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80" class="img-fluid rounded" alt="Leather Oxford Shoes" id="productImage">
+                </div>
+                
+                <!-- Product Info -->
+                <div class="col-md-6">
+                    <h1 id="productName">Leather Oxford Shoes</h1>
+                    <p class="product-price fs-3" id="productPrice">UGX 129,990</p>
+                    <p class="text-muted">Elegant handmade leather shoes crafted from premium materials for the discerning gentleman.</p>
+                    
+                    <div class="mt-4">
+                        <h5>Details</h5>
+                        <ul>
+                            <li>Premium full-grain leather upper</li>
+                            <li>Hand-stitched construction</li>
+                            <li>Goodyear welted for durability</li>
+                            <li>Full leather lining</li>
+                            <li>Leather sole with rubber heel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Select Size</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <button class="btn btn-outline-secondary size-btn">7</button>
+                            <button class="btn btn-outline-secondary size-btn">8</button>
+                            <button class="btn btn-outline-secondary size-btn active">9</button>
+                            <button class="btn btn-outline-secondary size-btn">10</button>
+                            <button class="btn btn-outline-secondary size-btn">11</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Quantity</h5>
+                        <div class="input-group mb-3" style="width: 150px;">
+                            <button class="btn btn-outline-secondary" type="button" id="decreaseQty">-</button>
+                            <input type="text" class="form-control text-center" value="1" id="quantityInput" readonly aria-label="Quantity">
+                            <button class="btn btn-outline-secondary" type="button" id="increaseQty">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button class="btn btn-primary btn-lg w-100" id="addToCartDetail">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">You May Also Like</h3>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="Suede Loafers">
+                        <div class="card-body">
+                            <h5 class="card-title">Suede Loafers</h5>
+                            <p class="product-price">UGX 109,990</p>
+                            <button class="btn add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" class="card-img-top" alt="Silk Blouse">
+                        <div class="card-body">
+                            <h5 class="card-title">Silk Blouse</h5>
+                            <p class="product-price">UGX 89,990</p>
+                            <button class="btn add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" class="card-img-top" alt="Cashmere Sweater">
+                        <div class="card-body">
+                            <h5 class="card-title">Cashmere Sweater</h5>
+                            <p class="product-price">UGX 149,990</p>
+                            <button class="btn add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Your Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Cart items will be dynamically inserted here -->
+                        <p id="emptyCartMessage" class="text-center">Your cart is empty</p>
+                    </div>
+                    <div class="mt-4">
+                        <h5>Total: UGX <span id="cartTotal">0</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                    <button type="button" class="btn btn-primary" id="checkoutBtn">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Elegant Fashion</h5>
+                    <p>Premium fashion and bespoke tailoring services</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2023 Elegant Fashion. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Product detail specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Size selection
+            const sizeButtons = document.querySelectorAll('.size-btn');
+            sizeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    sizeButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Quantity control
+            const quantityInput = document.getElementById('quantityInput');
+            const decreaseBtn = document.getElementById('decreaseQty');
+            const increaseBtn = document.getElementById('increaseQty');
+            
+            decreaseBtn.addEventListener('click', function() {
+                let qty = parseInt(quantityInput.value);
+                if (qty > 1) {
+                    quantityInput.value = qty - 1;
+                }
+            });
+            
+            increaseBtn.addEventListener('click', function() {
+                let qty = parseInt(quantityInput.value);
+                quantityInput.value = qty + 1;
+            });
+            
+            // Add to cart from detail page
+            document.getElementById('addToCartDetail').addEventListener('click', function() {
+                // In a real app, this would add the specific product with selected size and quantity
+                alert('Product added to cart!');
+            });
+        });
+    </script>
+</body>
+</html>
