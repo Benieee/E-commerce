@@ -108,6 +108,44 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartUI();
     cartModal.hide();
   });
+  
+  // Product detail functionality
+  const sizeButtons = document.querySelectorAll('.size-btn');
+  sizeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      sizeButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+  
+  // Quantity control for product detail
+  const detailQuantityInput = document.getElementById('detailQuantityInput');
+  const decreaseDetailBtn = document.getElementById('decreaseDetailQty');
+  const increaseDetailBtn = document.getElementById('increaseDetailQty');
+  
+  if (decreaseDetailBtn && increaseDetailBtn && detailQuantityInput) {
+    decreaseDetailBtn.addEventListener('click', function() {
+      let qty = parseInt(detailQuantityInput.value);
+      if (qty > 1) {
+        detailQuantityInput.value = qty - 1;
+      }
+    });
+    
+    increaseDetailBtn.addEventListener('click', function() {
+      let qty = parseInt(detailQuantityInput.value);
+      detailQuantityInput.value = qty + 1;
+    });
+  }
+  
+  // Add to cart from detail page
+  const addToCartDetailBtn = document.getElementById('addToCartDetail');
+  if (addToCartDetailBtn) {
+    addToCartDetailBtn.addEventListener('click', function() {
+      // In a real app, this would add the specific product with selected size and quantity
+      alert('Product added to cart!');
+      showToast('Product added to cart!');
+    });
+  }
 });
 
 // Render products to the page

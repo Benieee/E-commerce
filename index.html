@@ -28,7 +28,10 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#products">Products/Services</a>
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product-detail">Product Detail</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#team">Team</a>
@@ -171,6 +174,97 @@
         </div>
     </section>
 
+    <!-- Product Detail Section -->
+    <section id="product-detail" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-md-6">
+                    <img src="img/shoess.jpg" class="img-fluid rounded" alt="Leather Oxford Shoes" id="detailProductImage">
+                </div>
+                
+                <!-- Product Info -->
+                <div class="col-md-6">
+                    <h2 id="detailProductName">Leather Shoes</h2>
+                    <p class="product-price fs-3" id="detailProductPrice">UGX 35,000</p>
+                    <p class="text-muted">Elegant handmade leather shoes .</p>
+                    
+                    <div class="mt-4">
+                        <h5>Details</h5>
+                        <ul>
+                            <li> full-grain leather upper</li>
+                            <li>Hand-stitched construction</li>
+                            <li>Goodyear welted for durability</li>
+                            <li>Full leather lining</li>
+                            <li>Leather sole with rubber heel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Select Size</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <button class="btn btn-outline-secondary size-btn">7</button>
+                            <button class="btn btn-outline-secondary size-btn">8</button>
+                            <button class="btn btn-outline-secondary size-btn">9</button>
+                            <button class="btn btn-outline-secondary size-btn">10</button>
+                            <button class="btn btn-outline-secondary size-btn">11</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>Quantity</h5>
+                        <div class="input-group mb-3" style="width: 150px;">
+                            <button class="btn btn-outline-secondary" type="button" id="decreaseDetailQty">-</button>
+                            <input type="text" class="form-control text-center" value="1" id="detailQuantityInput" readonly aria-label="Quantity">
+                            <button class="btn btn-outline-secondary" type="button" id="increaseDetailQty">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button class="btn btn-primary btn-lg w-100" id="addToCartDetail">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h3 class="mb-4">You May Also Like</h3>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="img/shoes.jpg" class="card-img-top" alt="Suede Loafers">
+                        <div class="card-body">
+                            <h5 class="card-title">Suede Shoes</h5>
+                            <p class="product-price">UGX 45,000</p>
+                            <button class="btn add-to-cart-btn" data-id="3">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="img/cots.jpg" class="card-img-top" alt="Silk Blouse">
+                        <div class="card-body">
+                        <h5 class="card-title">Silk Coat</h5>
+                        <p class="product-price">UGX 60,000</p>
+                        <button class="btn add-to-cart-btn" data-id="1">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="card">
+                        <img src="img/shirt1.jpeg" class="card-img-top" alt="Cashmere Sweater">
+                        <div class="card-body">
+                            <h5 class="card-title">Designer Shirt</h5>
+                            <p class="product-price">UGX 35,000</p>
+                            <button class="btn add-to-cart-btn" data-id="5">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section id="team" class="py-5">
         <div class="container">
@@ -186,9 +280,9 @@
                     <div class="card h-100 text-center">
                         <img src="img/Tailor.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Alex Morgan</h5>
-                            <p class="card-text">Founder & Head Tailor</p>
-                            <p class="card-text">With over 15 years of experience in fashion and tailoring, Alex leads our team with passion and expertise.</p>
+                            <h5 class="card-title">Munyampundu Schadrack</h5>
+                            <p class="card-text">Business owner&manager</p>
+                            <p class="card-text">With over several years of experience in fashion and tailoring, Munyampundu Schadrack leads our team with passion and expertise.</p>
                         </div>
                     </div>
                 </div>
@@ -196,23 +290,11 @@
                 <!-- Team Member 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 text-center">
-                        <img src="img/shoes.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
+                        <img src="img/Mum.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
                         <div class="card-body">
-                            <h5 class="card-title">Sarah Johnson</h5>
-                            <p class="card-text">Design Director</p>
-                            <p class="card-text">Sarah brings creative vision to our product collections and ensures we stay ahead of fashion trends.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Member 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 text-center">
-                        <img src="img/ladiesshoe.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Michael Chen</h5>
-                            <p class="card-text">Customer Experience Manager</p>
-                            <p class="card-text">Michael ensures every customer receives exceptional service and finds exactly what they're looking for.</p>
+                            <h5 class="card-title">Niyonsaba Thamar</h5>
+                            <p class="card-text">Sales & Customer Service Assistant</p>
+                            <p class="card-text">Niyonsaba brings creative vision to our product collections and ensures we stay ahead of fashion trends.</p>
                         </div>
                     </div>
                 </div>
@@ -234,22 +316,22 @@
                     <h3>Get In Touch</h3>
                     <p>We'd love to hear from you. Reach out to us for any inquiries about our products or services.</p>
                     
-                    <div class="mt-4">
-                        <h4>Contact Information</h4>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><strong>Address:</strong> 123 Fashion Street, Style District, ST 10001</li>
-                            <li class="mb-2"><strong>Phone:</strong> +1 (555) 123-4567</li>
-                            <li class="mb-2"><strong>Email:</strong> info@internationalshop.com</li>
-                            <li class="mb-2"><strong>Hours:</strong> Monday-Friday: 9AM-7PM, Saturday: 10AM-6PM, Sunday: Closed</li>
-                        </ul>
-                    </div>
+                    <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Small Gate ,Bugema University</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+256789333842/+256778842546</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>thamarniyonsa@gmail.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Sun-Fri: 9AM-10PM</li>
+                    </ul>
+                </div>
                     
                     <div class="mt-4">
                         <h4>Follow Us</h4>
                         <p>Stay updated with our latest collections and offers:</p>
                         <div class="d-flex gap-3">
                             <a href="#" class="btn btn-outline-primary">Facebook</a>
-                            <a href="#" class="btn btn-outline-info">Twitter</a>
+                            <a href="#" class="btn btn-outline-success">WhatsApp</a>
                             <a href="#" class="btn btn-outline-danger">Instagram</a>
                         </div>
                     </div>
@@ -325,6 +407,7 @@
                         <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
                         <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
                         <li><a href="#products" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="#product-detail" class="text-white text-decoration-none">Product Detail</a></li>
                         <li><a href="#team" class="text-white text-decoration-none">Our Team</a></li>
                         <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
