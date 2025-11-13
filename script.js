@@ -3,6 +3,52 @@
 
 let cart = [];
 
+// Sample products data
+const products = [
+  {
+    id: 1,
+    name: "Men's Formal Suit",
+    price: 120000,
+    image: "img/cots.jpg",
+    category: "clothing"
+  },
+  {
+    id: 2,
+    name: "Women's Evening Dress",
+    price: 85000,
+    image: "img/ladiesshoe.jpg",
+    category: "clothing"
+  },
+  {
+    id: 3,
+    name: "Leather Dress Shoes",
+    price: 65000,
+    image: "img/shoes.jpg",
+    category: "shoes"
+  },
+  {
+    id: 4,
+    name: "Casual Sneakers",
+    price: 45000,
+    image: "img/shoess.jpg",
+    category: "shoes"
+  },
+  {
+    id: 5,
+    name: "Designer Shirt",
+    price: 35000,
+    image: "img/shirt1.jpeg",
+    category: "clothing"
+  },
+  {
+    id: 6,
+    name: "Premium Socks Set",
+    price: 15000,
+    image: "img/socks.jpg",
+    category: "clothing"
+  }
+];
+
 // DOM Elements
 const productsContainer = document.getElementById('productsContainer');
 const cartItems = document.getElementById('cartItems');
@@ -12,6 +58,7 @@ const cartIcon = document.getElementById('cartIcon');
 const cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
 const filterButtons = document.querySelectorAll('.filter-btn');
 const tailoringForm = document.getElementById('tailoringForm');
+const contactForm = document.getElementById('contactForm');
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
@@ -41,6 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     validateTailoringForm();
   });
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      validateContactForm();
+    });
+  }
   
   document.getElementById('checkoutBtn').addEventListener('click', function() {
     if (cart.length === 0) {
@@ -272,6 +326,30 @@ function loadCartFromLocalStorage() {
   if (storedCart) {
     cart = JSON.parse(storedCart);
   }
+}
+
+// Validate contact form
+function validateContactForm() {
+  const contactName = document.getElementById('contactName').value.trim();
+  const contactEmail = document.getElementById('contactEmail').value.trim();
+  const contactMessage = document.getElementById('contactMessage').value.trim();
+  
+  if (!contactName || !contactEmail || !contactMessage) {
+    alert('Please fill in all required fields.');
+    return false;
+  }
+  
+  // Simple email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(contactEmail)) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+  
+  // If all validations pass
+  alert('Thank you for your message! We will contact you shortly.');
+  contactForm.reset();
+  return true;
 }
 
 // Show toast notification

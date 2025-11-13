@@ -6,6 +6,8 @@
     <title>INTERNATIONAL SHOP</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
@@ -20,13 +22,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#shop">Shop</a>
+                        <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tailoring">Tailoring</a>
+                        <a class="nav-link" href="#products">Products/Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="cartIcon">Cart (<span id="cartCount">0</span>)</a>
@@ -37,13 +45,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero py-5">
+    <section id="home" class="hero py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h3 class="display-4">Fashion & Tailoring services</h3>
                     <p class="lead">Discover your best outfits and bespoke tailoring services. we have all styles for both ladies and gentlemen at favourable prices.</p>
-                    <a href="#shop" class="btn btn-primary btn-lg">Shop Now</a>
+                    <a href="#products" class="btn btn-primary btn-lg">Shop Now</a>
                 </div>
                 <div class="col-md-6">
                     <img src="img/Tailor.jpg" alt="Fashion Collection" class="img-fluid rounded">
@@ -52,10 +60,50 @@
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section id="shop" class="py-5">
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Featured Products</h2>
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>About Us</h2>
+                    <p class="lead mx-auto" style="max-width: 800px;">International Shop is your premier destination for fashion and bespoke tailoring services.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Our Story</h3>
+                    <p>Founded with a passion for fashion and craftsmanship, International Shop has been serving customers with quality clothing and tailoring services for over a decade. Our journey began with a simple vision: to provide exceptional fashion solutions that blend style, comfort, and affordability.</p>
+                    <p>We believe that everyone deserves to look and feel their best, which is why we offer a wide range of products and services tailored to meet diverse needs and preferences.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Our Mission</h3>
+                    <p>At International Shop, our mission is to empower individuals through fashion by offering:</p>
+                    <ul>
+                        <li>High-quality clothing and accessories for men and women</li>
+                        <li>Bespoke tailoring services that create perfectly fitted garments</li>
+                        <li>Exceptional customer service and personalized shopping experiences</li>
+                        <li>Affordable pricing without compromising on quality</li>
+                    </ul>
+                    <p>We are committed to sustainability and ethical practices in our sourcing and production processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products/Services -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>Our Products & Services</h2>
+                    <p class="lead mx-auto" style="max-width: 800px;">Discover our wide range of fashion products and professional tailoring services designed to meet your unique style needs.</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h3 class="text-center mb-4">Featured Products</h3>
+                    <p class="text-center mb-5">Explore our collection of premium fashion items for men and women</p>
             
             <!-- Filter Controls -->
             <div class="row mb-4">
@@ -68,6 +116,14 @@
                 </div>
             </div>
             
+            <!-- Tailoring Services -->
+            <div class="row mt-5 pt-5 border-top">
+                <div class="col-12 text-center mb-5">
+                    <h3>Professional Tailoring Services</h3>
+                    <p class="lead mx-auto" style="max-width: 800px;">Our expert tailors provide custom fitting and alteration services to ensure you look your best.</p>
+                </div>
+            </div>
+            
             <!-- Products Grid -->
             <div class="row" id="productsContainer">
                 <!-- Product cards will be dynamically inserted here -->
@@ -75,10 +131,8 @@
         </div>
     </section>
 
-    <!-- Tailoring Services -->
-    <section id="tailoring" class="py-5 bg-light">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Tailoring Services</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <form id="tailoringForm">
@@ -114,6 +168,117 @@
             </div>
         </div>
     </section>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>Our Team</h2>
+                    <p class="lead mx-auto" style="max-width: 800px;">Meet the talented professionals dedicated to bringing you the best in fashion and tailoring services.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/Tailor.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Alex Morgan</h5>
+                            <p class="card-text">Founder & Head Tailor</p>
+                            <p class="card-text">With over 15 years of experience in fashion and tailoring, Alex leads our team with passion and expertise.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/shoes.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Sarah Johnson</h5>
+                            <p class="card-text">Design Director</p>
+                            <p class="card-text">Sarah brings creative vision to our product collections and ensures we stay ahead of fashion trends.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center">
+                        <img src="img/ladiesshoe.jpg" class="card-img-top" alt="Team Member" style="height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Michael Chen</h5>
+                            <p class="card-text">Customer Experience Manager</p>
+                            <p class="card-text">Michael ensures every customer receives exceptional service and finds exactly what they're looking for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2>Contact Us</h2>
+                    <p class="lead mx-auto" style="max-width: 800px;">Have questions or want to visit our store? Get in touch with us through any of the channels below.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3>Get In Touch</h3>
+                    <p>We'd love to hear from you. Reach out to us for any inquiries about our products or services.</p>
+                    
+                    <div class="mt-4">
+                        <h4>Contact Information</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>Address:</strong> 123 Fashion Street, Style District, ST 10001</li>
+                            <li class="mb-2"><strong>Phone:</strong> +1 (555) 123-4567</li>
+                            <li class="mb-2"><strong>Email:</strong> info@internationalshop.com</li>
+                            <li class="mb-2"><strong>Hours:</strong> Monday-Friday: 9AM-7PM, Saturday: 10AM-6PM, Sunday: Closed</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h4>Follow Us</h4>
+                        <p>Stay updated with our latest collections and offers:</p>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-primary">Facebook</a>
+                            <a href="#" class="btn btn-outline-info">Twitter</a>
+                            <a href="#" class="btn btn-outline-danger">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactSubject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="contactSubject">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Shopping Cart Modal -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
@@ -141,15 +306,57 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white">
+    <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4 mb-4 mb-md-0">
                     <h5>International Shop</h5>
-                    <p> fashion and tailoring services</p>
+                    <p>Your premier destination for fashion and bespoke tailoring services. We offer quality clothing and professional tailoring to help you look and feel your best.</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+
+                    </div>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2025 International Shop. All right reserved.</p>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#products" class="text-white text-decoration-none">Products</a></li>
+                        <li><a href="#team" class="text-white text-decoration-none">Our Team</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Products</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Men's Clothing</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Women's Clothing</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Shoes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Accessories</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Small Gate ,Bugema University</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+256789333842/+256778842546</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>thamarniyonsa@gmail.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Sun-Fri: 9AM-10PM</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 International Shop. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none">Terms of Service</a>
                 </div>
             </div>
         </div>
