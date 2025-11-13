@@ -1,52 +1,6 @@
 // script.js - Main JavaScript file for the Elegant Fashion Shop
 
-// Sample product data
-const products = [
-  {
-    id: 1,
-    name: "Leather Oxford Shoes",
-    price: 129990,
-    category: "shoes",
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
-  },
-  {
-    id: 2,
-    name: "Silk Blouse",
-    price: 89990,
-    category: "clothing",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80"
-  },
-  {
-    id: 3,
-    name: "Wool Trousers",
-    price: 99990,
-    category: "clothing",
-    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-  },
-  {
-    id: 4,
-    name: "Suede Loafers",
-    price: 109990,
-    category: "shoes",
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-  },
-  {
-    id: 5,
-    name: "Cashmere Sweater",
-    price: 149990,
-    category: "clothing",
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
-  },
-  {
-    id: 6,
-    name: "Designer Handbag",
-    price: 199990,
-    category: "clothing",
-    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80"
-  }
-];
 
-// Cart array to store items
 let cart = [];
 
 // DOM Elements
